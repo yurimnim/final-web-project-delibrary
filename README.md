@@ -10,6 +10,10 @@ MVC패턴을 활용한 온라인 도서관 대여 서비스 제공하는 웹사�
 ### 3.기술스택
   - 프론트: HTML/CSS, Javascript, Jquery, Bootstrap, JSP
   - 백: Java, OracleDB, SQLDeveloper, SpringMVC, MyBatis, Ajax
+
+### 4. 주요구현기능
+    #### A. 홈화면
+
   
 
 

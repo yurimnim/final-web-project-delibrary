@@ -1,0 +1,127 @@
+/*
+bg-light #f8f9fa
+bg-dark #343a40
+
+btn-success #28A745
+btn-secondary #6C757D
+
+스프링 연 #75BD43
+스프링 진 #107637
+*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Gugi&family=Noto+Serif+KR:wght@200;300;400;500;600;700&display=swap');
+
+/* 유림추가 */
+
+/* 1. 회원가입페이지 */
+.btn-Customer {
+  border-radius: 3px;
+}
+
+.email {
+  margin: -12px 0 15px 0;
+}
+
+#insertCustomer {
+  width: 500px;
+  margin: auto;
+}
+
+.signup_required {
+  color: #107637;
+}
+
+.pw_message {
+  color: red;
+  margin-top: -1px;
+}
+
+#pw_match,
+#pw_length,
+#pw_ok {
+  display: none;
+}
+
+#email_ok_ok,
+#email_ok {
+  margin-top: -12px;
+  display: none;
+}
+
+/* 회원가입 ok */
+
+#insertCustomerOk {
+  width: 800px;
+  margin: auto;
+  align-items: center;
+}
+
+.jumbotron {
+/*   margin-bottom: 175px; */
+  justify-content: space-between;
+  background-color: #f5f5f5;
+}
+
+.insertCustomerImg {
+  margin-top: -40px;
+  align-items: center;
+}
+
+/* 2. 로그인 */
+#loginPage {
+  width: 500px;
+  margin: auto;
+}
+
+a {
+	color:  #107637;
+}
+
+.heroTitle {
+  font-family: 'Gugi', cursive;
+  font-weight: 100;
+  margin: 70px 0 10px 0;
+  text-align: center;
+}
+
+.heroTitle_dot {
+  color: #8FBC8F;
+  font-family: "Noto San Serif KR", serif;
+  font-weight: 600;
+}
+
+.heroTitle_kor {
+  font-family: 'Gugi', cursive;
+  font-weight: 300;
+  color: #107637;
+}
+
+#loginInfo {
+  margin-bottom: 100px;
+}
+
+.heroLine {
+  border: 1px solid #8FBC8F;
+}
+
+/* 패스워드 변경페이지 */
+#pwChangePage {
+  width: 700px;
+  margin: auto;
+}
+
+.pw-changeForm {
+  width: 500px;
+}
+
+/* 유림추가 끝 */
+
+/* 합치면서 수정한 부분 */
+#main-footer a{
+	color: white;
+}
+
+form label{
+	font-family: 'Noto Serif KR', serif;
+}

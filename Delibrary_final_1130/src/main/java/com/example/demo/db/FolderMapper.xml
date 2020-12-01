@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="folder">
+  <select id="selectByNo" resultType="folderVO">
+select * from folder where ml_no = #{cust_no}  
+</select>
+
+<!-- 내서재 페이징처리 -->
+ <select id="pageByfolder" resultType="java.lang.Integer">
+select COUNT(*) from folder where ml_no = #{cust_no}  
+</select>
+ 
+ <!-- 
+  <update id="updateBook">
+  	update book set B_COUNT = B_COUNT-1 where B_NO=#{B_NO}
+  </update>
+  -->
+</mapper>

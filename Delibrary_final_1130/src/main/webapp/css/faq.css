@@ -1,0 +1,66 @@
+/*
+bg-light #f8f9fa
+bg-dark #343a40
+
+btn-success #28A745
+btn-secondary #6C757D
+
+스프링 연 #75BD43
+스프링 진 #107637
+*/
+
+@charset "EUC-KR";
+
+.accordion{
+	margin:10px;
+}
+
+label{
+	width: 756px;
+}
+
+input[id*="answer"]{
+	display: none;
+}
+
+input[id*="answer"] + label {
+	display: block;
+	padding: 20px;
+	border-bottom: 0;
+	font-weight: 400;
+	background-color: #f0f0f0;
+	cursor: pointer;
+	position: relative;
+}
+
+.search_btn_array{
+	margin-left: 15%;
+}
+	
+#input_search{
+	width: 500px;
+}
+
+input[id*="answer"] + label + div {
+	max-height: 0;
+	transition: all .35s;
+	overflow: hidden;
+	background: #f8f9fa;
+	font-size: 16px;
+}
+input[id*="answer"] + label + div p {
+	display: inline-block;
+	padding: 5px 20px;
+	font-size: 16px;
+}
+input[id*="answer"]:checked  + label + div{
+	max-height: 600px;
+	background-position: 0 -30px;
+	width: 756px;
+	padding: 20px 0;
+}
+	
+/* 오시는길 테이블 */
+#info-table th{
+	padding: 5px 10px;
+}

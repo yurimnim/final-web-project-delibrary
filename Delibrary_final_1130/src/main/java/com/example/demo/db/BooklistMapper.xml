@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="book">
+
+	<!-- 사서추천도서 목록 -->
+	<select id="findAllRecom" resultType="bookVO">
+		select * from (select * from book order by b_no) where rownum &lt;=12
+	</select>
+	
+	<!-- 이달의 인기도서 목록 -->
+	<select id="getPopBook" resultType="bookVO">
+		<![CDATA[select * from(select b_title, b_writer,b_image,count(bor_no) from book, borrow where book.b_no = borrow.b_no group by b_title, b_writer, b_image order by count(bor_no) desc) where rownum<=12 ]]>
+	</select>
+	
+	<!-- 신착도서 목록  -->
+	<select id="selectAllNew" resultType="bookVO">
+		<![CDATA[ select * from (select * from book order by b_year desc) where rownum <=12 ]]>
+	</select>  
+	
+</mapper>

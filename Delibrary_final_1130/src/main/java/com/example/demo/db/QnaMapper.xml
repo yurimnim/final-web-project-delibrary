@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="qna">
+    <!-- 전체 게시글수 -->
+    <select id="selectCount" resultType="java.lang.Integer">
+   		select count(*) from post where p_no like '40%'
+   		<if test="search != null and search != '' and option != null and option != ''">
+ 			and ${option} like '%'||#{search}||'%'
+ 		</if>
+ 		order by p_id desc
+    </select>
+    
+	<!-- 전체 게시글 목록 + 검색기능 + 페이징처리 -->
+	<!-- select * from (select rownum n, q.* from (select * from post where p_no like '40%' and p_title like '%페이징%' order by p_id desc)q) where n between 1 and 10; -->
+  	<select id="selectAll" resultType="postVO">
+    	select * from (select rownum n, q.* from (select * from post where p_no like '40%' 
+		<if test="search != null and search != '' and option != null and option != ''">
+	 		and ${option} like '%'||#{search}||'%' 
+	 	</if>
+	 	order by p_no desc) q) where n between #{start} and #{end}
+    </select>  
+  
+    <!-- 게시글 상세보기 -->
+    <select id="selectById" resultType="postVO">
+   		 select * from post where p_id = #{p_id}
+    </select>
+  
+  	<!-- 게시글 조회수 -->
+  	<update id="updateHit">
+  		update post set p_hit=p_hit+1 where p_id = #{p_id}
+  	</update>
+  	
+  	<!-- 다음 글 ID -->
+	<select id="nextId" resultType="java.lang.Integer">
+	 	 select nvl(max(p_id),0)+1 from post
+	 </select>
+  	<!-- 다음 글번호 -->
+	<select id="nextNo" resultType="java.lang.Integer">
+	 	 select 40000+mod(nvl(max(p_no),0),10000)+1 from post where p_no like '40%'
+	</select>
+    
+	<!-- 새글 작성 -->
+	<insert id="insert">
+		insert into post(p_id,p_no,p_title,p_writer,p_content,p_hit,p_regdate,fname,cust_no) values(#{p_id},#{p_no},#{p_title},#{p_writer},#{p_content},#{p_hit},sysdate,#{fname},#{cust_no})
+	</insert>	
+
+	<!-- 게시글 수정 -->
+	<update id="update">
+		update post set p_title=#{p_title},p_content=#{p_content},fname=#{fname} where p_id=#{p_id} and cust_no=#{cust_no}
+	</update>
+	
+	<!-- 게시글 삭제 -->
+	<delete id="delete">
+		<if test="cust_no != 1">
+			delete post where p_id=#{p_id} and cust_no=#{cust_no}
+		</if>
+		<if test="cust_no == 1">
+			delete post where p_id=#{p_id}
+		</if>
+	</delete>
+
+	
+</mapper>

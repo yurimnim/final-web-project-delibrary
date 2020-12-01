@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+  <properties resource="com/example/demo/db/db.properties"/>
+  
+  <typeAliases>
+	<typeAlias type="com.example.demo.vo.BookstoreVO" alias="bookstoreVO"/>
+	<typeAlias type="com.example.demo.vo.BookVO" alias="bookVO"/>
+	<typeAlias type="com.example.demo.vo.CategoryVO" alias="categoryVO"/>
+	<typeAlias type="com.example.demo.vo.CustomerVO" alias="customerVO"/>
+	<typeAlias type="com.example.demo.vo.FilesVO" alias="filesVO"/>
+	<typeAlias type="com.example.demo.vo.My_libraryVO" alias="my_libraryVO"/>
+  	<typeAlias type="com.example.demo.vo.PostVO" alias="postVO"/>
+  	<typeAlias type="com.example.demo.vo.ReplyVO" alias="replyVO"/>
+  	<typeAlias type="com.example.demo.vo.FolderVO" alias="folderVO"/>
+    <typeAlias type="com.example.demo.vo.BorrowVO" alias="borrowVO"/>
+    <typeAlias type="com.example.demo.vo.BorrowVO2" alias="borrowVO2"/>
+  </typeAliases>
+	
+  <environments default="development">
+    <environment id="development">
+      <transactionManager type="JDBC"/>
+      <dataSource type="POOLED">
+        <property name="driver" value="${driver}"/>
+        <property name="url" value="${url}"/>
+        <property name="username" value="${username}"/>
+        <property name="password" value="${password}"/>
+      </dataSource>
+    </environment>
+  </environments>
+  
+  <mappers>
+    <mapper resource="com/example/demo/db/BookMapper.xml"/>
+    <mapper resource="com/example/demo/db/BookstoreMapper.xml"/>
+    <mapper resource="com/example/demo/db/CustomerMapper.xml"/>
+    <mapper resource="com/example/demo/db/PostMapper.xml"/> 
+    <mapper resource="com/example/demo/db/QnaMapper.xml"/> 
+	<mapper resource="com/example/demo/db/ReplyMapper.xml"/>
+	<mapper resource="com/example/demo/DB/MainMapper.xml" />
+	<mapper resource="com/example/demo/DB/MypageMapper.xml" />
+	<mapper resource="com/example/demo/db/FolderMapper.xml" />
+    <mapper resource="com/example/demo/db/BorrowMapper.xml" />
+    <mapper resource="com/example/demo/DB/EmailPwCheckMapper.xml"/>
+    <mapper resource="com/example/demo/db/BooklistMapper.xml"/>
+
+
+  </mappers>
+  
+</configuration>

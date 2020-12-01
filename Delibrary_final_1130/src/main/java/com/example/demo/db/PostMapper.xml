@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="post">
+	<!-- 전체 게시글수 -->
+	<select id="selectCount" resultType="java.lang.Integer">
+		select count(*) from post where p_no like ''||#{group}||'%'
+		<if test="search != null and search != '' and option != null and option != ''">
+		 		and ${option} like '%'||#{search}||'%' 
+		 	</if> 
+	 	order by p_no desc
+	</select>
+		
+	<!-- 전체 게시글 목록 + 검색기능 + 페이징처리 -->
+<!-- 	
+			select * from (
+				select rownum n, post.* from (
+					select * from post where p_no like 'GROUP%' and p_title like '%SEARCH%' order by p_no desc) 
+				post) 
+			WHERE n between 1 and 10; -->
+			
+	<select id="selectAll" resultType="postVO">
+		select * from (select rownum n, q.* from (select * from post where p_no like ''||#{group}||'%'
+		<if test="search != null and search != '' and option != null and option != ''">
+			and ${option} like '%'||#{search}||'%' 
+		</if>
+		order by p_no desc) q) where n between #{start} and #{end}
+	</select> 
+	
+	<!-- 게시글 상세보기 -->
+	<select id="selectById" resultType="postVO">
+		select * from post where p_id=#{p_id} and p_no like ''||#{group}||'%'
+	</select>
+	
+	<!-- 게시글 조회수 -->
+  	<update id="updateHit">
+  		update post set p_hit=p_hit+1 where p_id = #{p_id}
+  	</update>
+	
+	<!-- 다음 글 ID -->
+	<select id="nextId" resultType="java.lang.Integer">
+	 	 select nvl(max(p_id),0)+1 from post
+	 </select>
+	<!-- 다음 글번호 -->
+	<select id="nextNo" resultType="java.lang.Integer">
+	 	 select ${group}*1000+mod(nvl(max(p_no),0),10000)+1 from post where p_no like ''||#{group}||'%'
+	 </select>
+
+	<!-- 새글 작성 -->
+	<insert id="insert">
+		insert into post(p_id,p_no,p_title,p_writer,p_content,p_hit,p_regdate,fname,cust_no,p_option) values(#{p_id},#{p_no},#{p_title},#{p_writer},#{p_content},#{p_hit},sysdate,#{fname},#{cust_no},#{p_option})
+	</insert>	
+
+	<!-- 게시글 수정 -->
+	<update id="update">
+		update post set p_title=#{p_title},p_content=#{p_content},fname=#{fname},p_option=#{p_option} where p_id=#{p_id} and cust_no=#{cust_no}
+	</update>
+	
+	<!-- 게시글 삭제 -->
+	<delete id="delete">
+		delete from post where p_id=#{p_id} and cust_no=#{cust_no}
+	</delete>
+
+	<!-- 용택 : 내서제 보기 상세보기 -->
+	<select id="My_list" resultType="postVO">
+		select * from post where cust_no=#{cust_no} and fol_no=#{fol_no}
+	</select>
+
+	<!-- 용택 : 책상세보기에서 포스트 추가 -->
+	<insert id="insert2">
+		  insert into post(p_id,p_no,p_title,p_writer,p_content,p_hit,p_regdate,fname,cust_no,fol_no) values (#{p_id},#{p_no},#{p_title},#{p_writer},#{p_content},#{p_hit},sysdate,#{fname},#{cust_no},#{fol_no})
+	</insert>
+	
+	<!-- 폴더 번호에 따른 전체 파일 목록 [현왕]-->
+   <select id="selectAll_fol" resultType="postVO">
+      select * from post where fol_no=#{fol_no} and p_no like ''||#{group}||'%' 
+      
+     <if test="search != null and search != '' and option !=null">
+          and ${option} like '%'||'${search}'||'%' 
+     </if>
+         
+      order by p_no desc
+   </select>
+	
+	<!-- 모든 게시판 글 구분 없이 가져오기[재성] -->
+	<select id="findAll" resultType="postVO">
+		select * from post
+	</select>
+</mapper>

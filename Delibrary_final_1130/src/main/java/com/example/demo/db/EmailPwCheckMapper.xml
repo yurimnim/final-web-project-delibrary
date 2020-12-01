@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="emailPwCheck">
+
+<!-- 유림 로그인창 이메일 찾기  -->	
+	<select id="findEmail" resultType="customerVO">
+		select * from customer where name=#{name} and m_phone=#{m_phone}
+	</select>
+
+<!-- 유림 회원가입 이메일 중복체크  -->	
+	<select id="checkEmail" resultType="customerVO">
+		select * from customer where email=#{email}
+	</select>
+	
+<!-- 비밀번호 변경 이메일 보내기 -->	
+	<select id="sendPwEmail" resultType="customerVO">
+		select * from customer where email=#{email} and name=#{name}
+	</select>
+
+<!-- 비밀번호 변경 -->	
+	<update id="updatePw"> 
+		update customer set pw=#{pw} where email=#{email}
+	</update>
+
+</mapper>
+

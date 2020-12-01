@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mypage">
+
+   <!-- 마이페이지 폴더 목록 -->
+   <select id="selectAllFolder" resultType="folderVO">
+      select f.fol_no fol_no, f.fol_name fol_name from folder f, my_library ml, customer c where c.cust_no=ml.cust_no and ml.ml_no=f.ml_no and c.cust_no=#{cust_no}
+      
+      <if test="search != null and search != ''">
+          and fol_name like '%'||'${search}'||'%' 
+       </if>
+
+   </select>
+   
+   <!-- 폴더 속 파일 정보 갖고오기 [현왕] -->
+    <select id="selectByFolder" resultType="postVO">
+       select * from post where cust_no=#{cust_no} and fol_no=#{fol_no}
+    </select>
+    
+   <!-- 전체 폴더 개수 [현왕]-->
+   <select id="selectFolder_cnt" resultType="java.lang.Integer">
+      select count(*) from folder f, my_library ml, customer c where c.cust_no=ml.cust_no and ml.ml_no=f.ml_no and c.cust_no=#{cust_no}
+   </select>
+   
+   <!-- 전체 파일 개수 [현왕] -->
+    <select id="selectFile_cnt" resultType="java.lang.Integer">
+        select count(*) from post where cust_no=#{cust_no} and p_no like '50%'
+    </select>
+    
+    <!-- 메모 수정 [현왕] -->
+   <update id="updateMemo">
+      update post set p_content=#{p_content} where p_id=#{p_id}
+   </update>
+   
+   <!-- 폴더 속 파일 개수 [현왕] -->
+    <select id="selectFile_cnt_Infol" resultType="java.lang.Integer">
+        select count(*) from post where cust_no=#{cust_no} and fol_no=#{fol_no} and p_no like '50%'
+    </select>
+    
+    <!-- 게시글 삭제 [현왕] -->
+   <delete id="deleteMyPage_file" parameterType="java.lang.Integer">
+      delete from post where p_id=#{p_id}
+   </delete>
+   
+    <!-- 폴더 삭제 [현왕] -->
+   <delete id="deleteMyPage_folder" parameterType="java.lang.Integer">
+      delete from folder where fol_no=#{fol_no}
+   </delete>
+   
+   <!-- 폴더 추가 [현왕] -->
+   <insert id="insertMyPage_folder" parameterType="java.lang.Integer">
+      insert into folder values(#{fol_no},'${fol_name}',#{ml_no})
+   </insert>
+
+   <select id="getNextFolNo" resultType="java.lang.Integer">
+      select nvl(max(fol_no),0)+1 from folder
+   </select>
+ </mapper>
+
+

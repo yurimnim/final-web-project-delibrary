@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="reply">
+	<!-- 댓글 불러오기 -->
+   <select id="selectAll" resultType="replyVO">
+      select * from reply, customer where p_id=#{p_id} and reply.cust_no=customer.cust_no order by re_no
+   </select>
+
+	<!-- 다음 댓글번호 -->
+	<select id="nextNo" resultType="java.lang.Integer">
+		select nvl(max(re_no),0) + 1 from reply
+	</select>
+	 
+	<!-- 새로운 댓글 작성 -->
+	<insert id="insert">
+		insert into reply values(#{re_no},#{p_id},#{p_no},#{re_content},#{re_writer},sysdate,#{cust_no})
+	</insert>
+	
+	<!-- 댓글 수정 -->
+	<update id="update">
+		update reply set re_content=#{re_content} where re_no=#{re_no} and cust_no=#{cust_no}
+	</update>
+	
+	<!-- 댓글 삭제 -->
+	<delete id="delete">
+		delete from reply where re_no=#{re_no} and cust_no=#{cust_no} 
+	</delete>
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

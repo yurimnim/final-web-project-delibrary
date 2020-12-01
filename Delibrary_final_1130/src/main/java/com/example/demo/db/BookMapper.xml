@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="book">
+	<select id="selectByNo" resultType="bookVO">
+		select * from book where b_no
+		= #{b_no}
+	</select>
+
+	<!-- 용택 책디테일에서 책저장 -->
+
+	<insert id="insertBook" parameterType="bookVO">
+		insert into book
+		values(#{b_no},#{b_title},#{b_publisher},#{b_writer},#{b_year},#{b_price},#{b_image},#{b_detail},#{b_index},#{b_count},#{c_no})
+	</insert>
+
+	<!-- 대여시 책재고 감소 -->
+	<update id="updateBook">
+		update book set B_COUNT = B_COUNT-1 where
+		B_NO=#{B_NO}
+	</update>
+
+	<!-- 대여시 책 넘버 삽입 -->
+	<select id="getNextNo" resultType="java.lang.Integer">
+		select nvl(max(b_no),0)+1 from
+		book
+	</select>
+
+	<!-- 대여시 대여 넘버 삽입 -->
+	<select id="getNextNo2" resultType="java.lang.Integer">
+		select nvl(max(b_no),0)+1 from
+		book
+	</select>
+	
+	<!-- 도서재고 수량  -->
+    <select id="calB_count" resultType="java.lang.Integer">
+	select b_count from book where b_no=#{bor_no}
+	</select>
+	
+
+	<!-- 모든 도서 정보 출력 [재성] -->
+	<select id="findAll" resultType="bookVO">
+		select * from book
+	</select>
+
+</mapper>

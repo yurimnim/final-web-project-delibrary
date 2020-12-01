@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="borrow">
+   
+   <insert id="insertBorrow" parameterType="borrowVO">
+      insert into borrow(bor_no,cust_no,b_no)
+      values(#{bor_no},#{cust_no},#{b_no})
+   </insert>
+   <!-- <delete id="deleteBorrow" parameterType="borrowVO"> delete borrow where 
+      BOR_NO=#{BOR_NO} </delete> -->
+   <select id="getNextNo" resultType="java.lang.Integer">
+      select nvl(max(bor_no),0)+1 from borrow
+   </select>
+
+   <!-- 
+   <update id="updateBorrow">
+      update Borrow set B_COUNT=#{B_COUNT}-1 where B_NO=#{B_NO}
+   </update>
+    -->
+   <!-- 북카트 list-->
+    <select id="selectBycust_No" resultType="borrowVO2">
+    SELECT
+    b.b_title, 
+    b.b_image,
+    b.b_publisher,
+    b.b_writer,
+    b.b_price, 
+    b.b_detail,
+    b.b_year,
+    a.bor_no,
+    a.b_no,
+   a.bor_date,
+   a.return_date,
+   a.return_ok,
+   a.cust_no
+   FROM borrow a, book b where a.b_no = b.b_no and cust_no = #{cust_no}
+   and bor_date is null
+      
+       
+  </select> 
+  
+ 
+
+
+  
+        <!-- 대출현황 list-->    
+      <select id="selectBycust_No2" resultType="borrowVO2">
+      
+    SELECT
+    *
+   FROM (select rownum n, q.* from (select distinct b.b_title, 
+    b.b_image,
+    b.b_publisher,
+    b.b_writer,
+    b.b_price, 
+    b.b_detail,
+    b.b_year,
+    a.bor_no,
+    a.b_no,
+   a.bor_date,
+   a.return_date,
+   a.return_ok,
+   a.cust_no from borrow a, book b where a.b_no = b.b_no and cust_no = #{cust_no} and bor_date is not null
+      and (return_ok like 'N' or return_ok like 'P')
+      order by bor_date desc)q)    
+  </select>
+  <!-- 대출반납 list-->    
+      <select id="selectBycust_No3" resultType="borrowVO2">
+      
+    SELECT
+    *
+   FROM (select rownum n, q.* from (select distinct b.b_title, 
+    b.b_image,
+    b.b_publisher,
+    b.b_writer,
+    b.b_price, 
+    b.b_detail,
+    b.b_year,
+    a.bor_no,
+    a.b_no,
+   a.bor_date,
+   a.return_date,
+   a.return_ok,
+   a.cust_no 
+   from borrow a, book b 
+   where a.b_no = b.b_no and cust_no = #{cust_no} and bor_date is not null
+    and sysdate > return_date
+    order by bor_date desc)q) where n between #{start} and #{end}    
+  </select>
+  
+  <!-- 용택 반납기능처리 P -->
+   <update id="updateBorrow2" parameterType="java.lang.Integer">
+     update borrow set return_ok='P' where bor_no=#{bor_no}
+  </update>
+  
+   <update id="updateBorrow">
+     update borrow set bor_date=#{bor_date}, return_date=#{return_date}, return_ok=#{return_ok}, b_no=#{b_no}, cust_no=#{cust_no}  where bor_no=#{bor_no}
+  </update>
+  <delete id="deleteBorrow">
+     DELETE FROM BORROW WHERE bor_no=#{bor_no}
+  </delete>
+     <!-- 사용자가 대여한 수량  -->
+    <select id="calB_no" resultType="java.lang.Integer">
+   select count(b_no) from BORROW where cust_no=#{cust_no}
+   </select>
+   
+   
+     <!-- 페이징처리 total 대출중인 대여목록[용택] -->
+       
+     <select id ="getTotalCount2" resultType="java.lang.Integer">
+        select count(*) from borrow where return_ok = 'N' and cust_no = #{cust_no}
+     </select>
+     
+    <!-- 페이징처리 total 대출한 대여목록[용택] -->
+    <select id ="getTotalCount3" resultType="java.lang.Integer">
+        select count(*) from borrow where cust_no = #{cust_no} 
+        and sysdate > return_date
+     </select>
+     
+     <!-- 대출현황 개수 세기 [현왕] -->
+     <select id ="getTotalCount_hw" resultType="java.lang.Integer">
+        select count(*) from (select * from borrow where return_ok = 'N' or return_ok ='P') where cust_no = #{cust_no}
+     </select>
+ 
+    
+   <!-- 모든 정보 가져오기[재성] -->
+   <select id="findAll" resultType="borrowVO">
+<!--       select * from borrow order by bor_no desc -->
+      select bor.*, cust.name from borrow bor, customer cust where bor.cust_no=cust.cust_no order by bor_no desc
+   </select>
+    <!-- 전체 게시글 수를 구하는 sql문 -->
+    <select id="getTotalCount" resultType="java.lang.Integer">
+        select count(*) from
+        borrow
+    </select>
+
+   <!-- 연체인지 여부 판단-->
+    <select id="delay" resultType="java.lang.Integer">
+        select count(*) from (select * from borrow where sysdate > return_date and return_ok='N' or return_ok='P') where cust_no=#{cust_no}
+    </select>
+   
+   <!-- 연체일수 계산. -->
+   <select id ="delay2" resultType="java.lang.Integer">
+      select sum(sysdate- return_date) from (select * from borrow where sysdate > return_date and return_ok='N' or return_ok='P') where cust_no=#{cust_no}
+   </select>
+
+
+  <!-- select * from (select rownum n, q.* from (select * from post where p_no like '40%' and p_title like '%페이징%' order by p_id desc)q) where n between 1 and 10; -->
+     <select id="selectAll" resultType="postVO">
+       select * from (select rownum n, q.* from (select * from post where p_no like '40%' 
+      <if test="search != null and search != '' and option != null and option != ''">
+          and ${option} like '%'||#{search}||'%' 
+       </if>
+       order by p_no desc) q) where n between #{start} and #{end}
+    </select>  
+
+
+
+
+
+
+
+
+
+
+</mapper>

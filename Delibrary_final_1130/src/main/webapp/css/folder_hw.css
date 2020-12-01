@@ -1,0 +1,116 @@
+/*
+bg-light #f8f9fa
+bg-dark #343a40
+
+btn-success #28A745
+btn-secondary #6C757D
+
+스프링 연 #75BD43
+스프링 진 #107637
+*/
+
+.folder {
+    cursor: pointer;
+    margin-right: -50%;
+    transform: translate(0, 0);
+    background-color: #FFD485;
+    width: 70px;
+    height: 50px;
+    border-radius: 10px; 
+}
+.folder:before {
+      width: 25px;
+      height: 15px;
+      border-radius: 5px;
+      content: '';
+      background-color: #FFD485;
+      position: absolute;
+      top: -5px;
+      left: 2%;
+}
+.folder:after {
+      display: block;
+      left: 40%;
+      width: 70px;
+      height: 50px;
+      border-radius: 10px;
+      content: '';
+      transform: skew(0deg);
+      background-color: #ffe1a8;
+      transition: all .2s; 
+}
+.folder .paper {
+      position: absolute;
+      top: 50%;
+      left: 40%;
+      transform: translate(-40%, -40%);
+      background-color: whitesmoke;
+      width: 60px;
+      height: 40px;
+      transition: all .2s; 
+}
+.folder .paper.one {
+        background-color: #ffadad; 
+}
+.folder .paper.two {
+        background-color: #ffd6a5; 
+}
+.folder .paper.three {
+        background-color: #fdffb6; }
+.folder .paper.four {
+        background-color: #9bf6ff; 
+}
+ .folder:hover:after {
+      transform: skew(-20deg);
+      margin-left: 10px; 
+}
+.folder:hover .paper:nth-child(1) {
+      transform: rotate(10deg) translate(-15px, -35px); 
+}
+.folder:hover .paper:nth-child(2) {
+      transform: rotate(20deg) translate(-15px, -35px); 
+}
+.folder:hover .paper:nth-child(3) {
+      transform: rotate(30deg) translate(-15px, -35px); 
+}
+.folder:hover .paper:nth-child(4) {
+      transform: rotate(40deg) translate(-15px, -35px); 
+}
+      
+      
+      
+<!-- -->
+
+.grid-container {
+	display: grid;
+	text-align: center;
+	grid-template-columns: 70px 70px 70px 70px 70px 70px 70px;
+	/*Make the grid smaller than the container*/
+	grid-gap: 35px;
+	padding: 5%;
+	
+}
+
+.grid-container a{
+	color: #343a40;
+}
+.grid-container a:hover{
+	color: #75BD43;
+}
+
+.grid-cont-font {
+	text-align: left;
+	padding: 10px 0;
+	font-size: 15px;
+}      
+
+
+#fol_card{
+	border: 1px solid white;
+}
+
+#fol_card_name{
+	 font-size: xx-large;
+	 font-weight: bold;
+	 padding-left: 5px;
+}

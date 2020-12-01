@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="customer">
+
+<!-- 유림 회원가입 탈퇴 회원넘버 -->
+	<insert id="insertCustomer" parameterType="customerVO">
+		insert into customer values(#{cust_no}, #{email}, #{pw}, #{addr}, #{addr2},  #{nickname}, #{interest}, #{name}, #{m_phone}, #{birthday},  #{fname}, #{manager})
+	</insert>
+	
+	<insert id="insert_library" parameterType="my_libraryVO">
+		insert into my_library values(#{ml_no}, #{cust_no})
+	</insert>
+
+	<select id="login" resultType="customerVO">
+		select * from customer where email=#{email} and pw=#{pw}
+	</select>
+	
+	<delete id="deleteCustomer">
+		delete customer where email=#{email} and pw=#{pw}
+	</delete>
+	
+	<select id="getNextNo" resultType="java.lang.Integer">
+    	select nvl(max(cust_no),0)+1 from customer
+  	</select>
+ 
+<!-- 유림 아이디/비번찾기   -->	
+	<select id="findEmail" resultType="customerVO">
+		select * from customer where name=#{name} and m_phone=#{m_phone}
+	</select>
+ 
+  <!-- 회원정보 전체출력 [현왕] order by 추가 [재성] -->
+  <select id="selectAll" resultType="customerVO">
+    select * from customer order by cust_no
+  </select>
+  
+  <!-- 회원정보 갖고오기 [현왕] -->
+  <select id="selectByCust_No" resultType="customerVO">
+  	select * from customer where cust_no=#{cust_no}
+  </select>
+  
+  <!-- 회원수정 [현왕] -->
+  <!-- 현왕 회원 컬럼에 addr2 추가 ================================================================================================== -->
+  <update id="updateCustomer">
+  	update customer set fname=#{fname}, nickname=#{nickname}, pw=#{pw}, m_phone=#{m_phone}, addr=#{addr}, addr2=#{addr2}, email=#{email}, interest=#{interest}, name=#{name} where cust_no=#{cust_no}
+  </update>
+  
+  <select id="getLoginInfo" resultType="customerVO">
+  	select cust_no, email, pw, name from customer where email=#{email} and pw=#{pw}
+  </select>
+</mapper>
+

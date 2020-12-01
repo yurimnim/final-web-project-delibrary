@@ -1,0 +1,162 @@
+@charset "UTF-8";
+
+/* carousel */
+.carousel-indicators1 {
+	right: 0;
+	bottom: -30px;
+}
+
+.carousel-indicators1 li {
+	outline: 1px solid lightgray;
+}
+
+.carousel-indicators1 .active {
+	outline: 1px solid black;
+}
+
+.card-body {
+	height: 60px;
+	padding: 0;
+	text-align: center;
+}
+
+.book-title {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	font-size: medium;
+}
+
+.controls-bottom {
+	display: inline-block;
+	float: right;
+}
+
+.carousel-inner {
+	height: 300px;
+}
+
+/* tabs */
+.home_post_title {
+	width: 60%;
+	text-align: left;
+	font-size: medium;
+	font-weight: normal;
+}
+
+.home_post_date {
+	width: 40%;
+	font-size: medium;
+	font-weight: lighter;
+}
+
+a {
+	color: black;
+	text-decoration: none;
+}
+
+a:hover {
+	color: black;
+	text-decoration: none;
+}
+
+/* 각 도서관 행사정보 링크 */
+.event-title {
+	text-align: center;
+	font-size: xx-large;
+	height: 80px;
+	font-weight: bolder;
+}
+
+/* <!--11/21 추가 !--> */
+/*
+bg-light #f8f9fa
+bg-dark #343a40
+
+btn-success #28A745
+btn-secondary #6C757D
+
+스프링 연 #75BD43
+스프링 진 #107637
+
+*/
+.navbar {
+	height: 70px;
+	background-color: #107637;
+}
+
+.hr-green {
+	border-bottom: 2px solid #107637;
+}
+
+.img-fit {
+	width: 100px;
+	height: 100px;
+}
+
+.home-gray {
+	background-color: #f8f9fa;
+	box-shadow: 0 0 15px 5px #e9e9e9;
+}
+
+.home-table {
+	background-color: white;
+	border: 1px solid #cecece;
+}
+
+.ellipsis {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.footer-table th {
+	border-right: 1px solid white;
+	padding-right: 10px;
+}
+
+.footer-table td {
+	padding-left: 10px;
+}
+
+.home-tag {
+	border: 1px solid #ccc;
+	height: 23%;
+	padding: 15px;
+	background-color: #f8f9fa;
+}
+
+#home-today {
+	background-color: #75BD43;
+	color: white;
+	font-weight: 400;
+	height: 50%;
+	padding: 30px;
+}
+
+#home-holiday {
+	background-color: #107637;
+	color: white;
+	height: 50%;
+	padding: 30px;
+}
+
+#home-holiday p{
+	font-size: 20px;
+	font-weight: 100;
+}
+
+#home-display {
+	padding-top: 200px;
+	font-weight: 200;
+}
+
+#home-searchbar {
+	padding-top: 80px;
+}
+
+#date {
+	font-size: 40px;
+	font-weight: 400;
+}
+

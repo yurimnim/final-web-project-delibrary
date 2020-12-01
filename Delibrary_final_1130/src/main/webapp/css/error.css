@@ -1,0 +1,29 @@
+/*
+bg-light #f8f9fa
+bg-dark #343a40
+
+btn-success #28A745
+btn-secondary #6C757D
+
+스프링 연 #75BD43
+스프링 진 #107637
+*/
+
+@charset "EUC-KR";
+
+#main-footer a, #main-footer a:hover, #main-footer a:focus{
+	color: white;
+}
+
+#error{
+	border-radius: 20px;
+	background: #e0e0e0;
+	min-height: 400px;
+}
+
+#error a{
+	color: black;
+}
+#error a:hover{
+	color: #75BD43;
+}

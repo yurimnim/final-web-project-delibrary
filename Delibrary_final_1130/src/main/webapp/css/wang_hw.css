@@ -1,0 +1,308 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700,900);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,700);
+@import url('https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css');
+/* =============================== 현왕 폴더 추가 모달창 내부 css =================================== */
+    .modal_wrap_fol .fol_title_title{
+		font-size:20px;
+		padding: 20px; 
+		background : #ffe066;
+		border-radius: 10px;
+		font-weight: bold;
+	}
+	.modal_wrap_fol{
+        display: none;
+        width: 350px;
+        height: 350px;
+        position: absolute;
+        top: 170%;
+        left: 120%;
+        margin: -250px 0 0 -250px;
+        background:#eee;
+        z-index: 3;
+        font-family: sans-serif;
+        text-align: center;
+        border-radius: 10px;
+    }
+    .black_bg_fol{
+        display: none;
+        position: fixed;
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-color:rgba(0, 0,0, 0.5);
+        top:0;
+        left: 0;
+        z-index: 2;
+    }
+    
+/* =============================== 현왕 폴더 추가 모달창 내부 css 종료 =================================== */
+
+#fol_list_title{
+	margin-top: 15px;
+}
+
+hr{
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+/*
+ *  Search Input
+*/
+.catalog-search {
+  position: relative;
+  margin: 0 20px;
+  max-width: 275px;
+  width: calc(100% - 2em);
+  vertical-align: top;
+  overflow: hidden;
+  float: right; }
+
+.input_field {
+  position: relative;
+  display: block;
+  float: right;
+  margin-top: 15px;
+  padding: 5px 0px 20px;
+  width: 100%;
+  border: none;
+  border-radius: 0;
+  color: #313131;
+  font-weight: normal;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: none;
+  box-shadow: none;
+  -webkit-appearance: none;
+  /* for box shadows to show on iOS */ }
+  .input_field:focus {
+    outline: none;
+    border: none;
+    background: none;
+    box-shadow: none;
+    -webkit-appearance: none; }
+    .input_field:focus .input_label-content {
+      bottom: 20px; }
+
+.input_label {
+  position: absolute;
+  display: inline-block;
+  bottom: 0;
+  left: 0;
+  padding: 0 0.25em;
+  width: 100%;
+  height: calc(100% - 1em);
+  color: #d2d6d5;
+  font-weight: light;
+  font-size: 15px;
+  text-align: left;
+  pointer-events: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-touch-callout: none;
+  user-select: none; }
+  .input_label:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 10px);
+    border-bottom: 1px solid rgba(49, 49, 49, 0.45); }
+  .input_label:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 2px;
+    width: 100%;
+    height: calc(100% - 10px);
+    border-bottom: 3px solid #28A745;
+    transform: translate3d(-100%, 0, 0);
+    transition: transform 0.3s; }
+
+.input_label-content {
+  position: absolute;
+  width: 100%;
+  bottom: 14px; }
+
+.input_label-search {
+  position: relative;
+  display: block;
+  color: rgba(49, 49, 49, 0.45); }
+.input_label-search:after {
+    content: '\f002';
+    position: absolute;
+    top: 7px;
+    right: 5px;
+    font-family: 'fontawesome'; }
+
+.input_field:focus + .input_label::after,
+.input--filled .input_label::after {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+
+.input_field:focus + .input_label .input_label-content,
+.input--filled .input_label-content {
+  -webkit-animation: anim-1 0.3s forwards;
+  animation: anim-1 0.3s forwards; }
+
+
+
+@-webkit-keyframes anim-1 {
+  50% {
+    opacity: 0;
+    -webkit-transform: translate3d(1em, 0, 0);
+    transform: translate3d(1em, 0, 0); }
+  51% {
+    opacity: 0;
+    -webkit-transform: translate3d(-1em, -40%, 0);
+    transform: translate3d(-1em, -40%, 0); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, -40%, 0);
+    transform: translate3d(0, -40%, 0); } }
+
+@keyframes anim-1 {
+  50% {
+    opacity: 0;
+    bottom: 24px;
+    -webkit-transform: translate3d(5em, 0, 0);
+    transform: translate3d(5em, 0, 0); }
+  51% {
+    opacity: 0;
+    bottom: 24px;
+    -webkit-transform: translate3d(-5em, -40%, 0);
+    transform: translate3d(-5em, -40%, 0); }
+  100% {
+    opacity: 1;
+    bottom: 24px;
+    -webkit-transform: translate3d(0, -40%, 0);
+    transform: translate3d(0, -40%, 0); } }
+
+
+/* =============================== 현왕 hr css =================================== */
+#updateCustomer > hr{
+	border: #e6e6e6 1px dotted;
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
+#fol_div > hr{
+	border: black 1px black;
+}
+/* =============================== 현왕 hr css =================================== */
+
+/* =============================== 현왕 hr css =================================== */
+.col-md-9 > #updateCustomer{
+	padding-top: 50px;	
+}
+/* =============================== 현왕 hr css =================================== */
+
+/* =============================== 현왕 모달창 내부 css =================================== */
+    .modal_wrap .title{
+		font-size:20px;
+		padding: 20px; 
+		background : gold;
+		border-radius: 10px;
+		font-weight: bold;
+	}
+	.modal_wrap{
+        display: none;
+        width: 500px;
+        height: 500px;
+        position: absolute;
+        top:50%;
+        left: 50%;
+        margin: -250px 0 0 -250px;
+        background:#eee;
+        z-index: 3;
+        font-family: sans-serif;
+        text-align: center;
+        border-radius: 10px;
+    }
+    .black_bg{
+        display: none;
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-color:rgba(0, 0,0, 0.5);
+        top:0;
+        left: 0;
+        z-index: 1;
+    }
+    
+/* =============================== 현왕 모달창 내부 css 종료 =================================== */
+
+/* =============================== 현왕 모달창 열기 & 내부 버튼 css 시작 =================================== */
+#modal_btn, #btn_pw_ok, .modal_close, #btn_fol_add {
+    background-color: white;
+    color: #17A2B8;
+    border: solid 1px #17A2B8;
+	border-radius: 5px;
+    cursor: pointer;
+	font-family: inherit;
+}
+#modal_btn:hover, #btn_pw_ok:hover, #btn_fol_add:hover, .modal_close:hover{
+			background-color: #17A2B8;
+			color: white;
+		}
+/* =============================== 현왕 모달창 열기 & 내부 버튼 css 종료 =================================== */
+
+/* =============================== 현왕 암호 입력 input css 시작 =================================== */
+#pw{
+	width: 300px;
+    line-height:30px;
+	border: 1px solid #CCC;
+	border-radius: 5px;
+		
+}
+/* =============================== 현왕 암호 입력 input css 종료 =================================== */
+
+/* ----- 현왕 select option CSS -------- */
+select {
+	width: 100px;
+	padding: 2px;
+	border: 1px solid #17A2B8;
+	color: #17A2B8;
+	font-family: inherit;
+	background: url('../img/arrow.png') no-repeat 95% 50%;
+	border-radius: 5px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+select::-ms-expand {
+    display: none;
+}
+/* ----- 현왕 select option CSS -------- */
+
+/* ----- 현왕 이메일&아이디 input type=text CSS -------- */
+#email{
+    width:220px;
+    line-height:30px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border:1px solid #CCC;
+}
+
+#id{
+	width: 30%;
+	border: 1px solid #CCC;
+	border-radius: 5px;
+	line-height: 30px;
+	text-align: center;
+}
+
+/* ----- 현왕 이메일 input type=text CSS -------- */
+
+
+/* 현왕추가 */
+#updateCustomer {
+	width: 500px;
+	margin: auto;
+}	
+
+#upload_click{
+     	cursor: pointer;
+}

@@ -1,0 +1,325 @@
+/*
+bg-light #f8f9fa
+bg-dark #343a40
+
+btn-success #28A745
+btn-secondary #6C757D
+
+스프링 연 #75BD43
+스프링 진 #107637
+*/
+#phone_a{
+	cursor: pointer;
+}
+
+.page-link{
+   color: #343a40;
+}
+
+.page-link:hover{
+   color: #107637;
+}
+
+.page-item.active .page-link{
+   background-color: #75BD43;
+   border-color: #75BD43;
+}
+
+img, .paging-num{
+	cursor: pointer;
+}
+ .paging a.paging-num:hover{
+	text-decoration: underline;
+}
+@media all and (min-width: 992px) {
+  .navbar .nav-item .dropdown-menu {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+    margin-top: 0;
+  }
+  .navbar .dropdown-menu.fade-down {
+    top: 80%;
+    transform: rotateX(-75deg);
+    transform-origin: 0% 0%;
+  }
+  .navbar .dropdown-menu.fade-up {
+    top: 180%;
+  }
+  .navbar .nav-item:hover .dropdown-menu {
+    transition: 0.3s;
+    opacity: 1;
+    visibility: visible;
+    top: 100%;
+    transform: rotateX(0deg);
+  }
+}
+
+body, .noto-sans {
+  overflow-x: hidden;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 300;
+}
+
+.noto-serif{
+	font-family: 'Noto Serif KR', serif;
+	font-weight: 300;
+}
+.dropdown-item{
+	font-weight: 300;
+}
+
+b{
+	font-weight: 500;
+}
+
+.icons {
+  height: 15px;
+}
+
+#home-icons p {
+  font-size: 14px;
+}
+
+.navbar .nav-link {
+  font-size: 16px;
+  text-transform: uppercase;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+}
+
+.carousel-item {
+  height: inherit;
+}
+
+.carousel-image-1 {
+  background: url('../img//home/ad1.png');
+  background-color: cadetblue;
+  background-size: cover;
+}
+
+.carousel-image-2 {
+  background: url('../img//home/ad2.png');
+  background-color: darkgoldenrod;
+  background-size: cover;
+}
+
+.carousel-image-3 {
+  background: url('../img/home/ad3.png');
+  background-color: darkseagreen;
+  background-size: cover;
+}
+
+#home-heading {
+  position: relative;
+  min-height: 600px;
+  background: url('../img/ex6.jpg');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  text-align: center;
+  color: #fff;
+  padding-top: 200px;
+}
+
+.dark-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+#video-play {
+  position: relative;
+  min-height: 200px;
+  background: url('../img/media.jpg');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: 0 -300px;
+  text-align: center;
+  color: #fff;
+}
+
+#video-play a {
+  color: #fff;
+}
+
+#page-header {
+  position: relative;
+  height: 180px;
+  background: url('../img/library3.png');
+  background-position: 0 -360px;
+  background-attachment: fixed;
+  color: #fff;
+  border-bottom: 1px #eee solid;
+  padding-top: 50px;
+}
+
+.page-header-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.about-img {
+  margin-top: -50px;
+}
+
+#faq .card {
+  border: #444;
+}
+
+#faq a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#faq .card-body,
+#faq .card-header {
+  background: #333;
+}
+
+#main-footer {
+  background-color: #107637;
+  color: #fff;
+  flex-shrink: none;
+  font-size: 14px;
+}
+
+/*  ------------------------------------------- */
+/*    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!      */
+/*    !!!!!!!  공통부분 추가 css 입니다  !!!!!!!      */
+/*    !!!!!!!      지우지 마세요       !!!!!!!      */
+/*    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!      */
+/*  ------------------------------------------- */
+
+html, body{
+	height: 100%;
+}
+
+#page-content{
+	flex: 1 0 auto;
+}
+
+.sidebar {
+  border: 1px solid gainsboro;
+}
+.side-head {
+  background: linear-gradient(to bottom right, #75BD43, #107637);
+  padding: 40px;
+}
+.sidebar a{
+	color: #343a40;
+}
+
+.searchbar {
+  border-radius: 25px;
+  padding: 10px 50px;
+  background: none;
+}
+
+.active a{
+	color: #107637;
+	font-weight: 500;	
+}
+
+.list-group .active{
+	background-color: #f8f9fa;
+	color: #343a40;
+	border-color: #d8d8d8;
+} 
+
+.btn {
+  border-radius: 25px;
+}
+
+.book-title {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	font-size: large;
+	font-weight: bold;
+}
+
+
+.tbody a{
+	color: #343a40;
+}
+
+.book-title {
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   font-size: medium;
+   font-weight: bold;
+}
+.book-writer{
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   font-size: small;
+}
+
+.footer-table *{
+	font-weight: 200;
+}
+.footer-table th{
+	border-right: 1px solid white;
+	padding-right:15px; 
+}
+.footer-table td{
+	padding-left: 15px;
+}
+.footer-table a{
+	padding-bottom: 10px;
+}
+
+/* 유림 추가 홈헤딩 START */
+
+#heroDesc,
+#heroDescKor {
+	text-align: right;
+	font-size: 13px;
+	margin-right: 20px;
+}
+
+#heroDesc {
+	margin-top: 168px;
+}
+
+#heroDescKor {
+	margin-top: -53px;
+	color: #DCDCDC;
+}
+/* 유림 추가 홈헤딩 END*/
+
+/* 유림 추가 사이트맵 START */
+.siteMapTitle {
+	text-align: center;
+	color: #107637;
+	font-weight: 500;
+}
+
+.siteMapAnchor {
+	color: black;
+/* 	font-family: 'Noto Sans KR', sans-serif; */
+	font-weight: 300;
+	font-size: 17px;
+	text-align: center;
+}
+
+.siteMapAnchor:hover {
+	color:#75BD43;
+}
+/* 유림 추가 사이트맵 END */
+
+
+/* 유림 추가 대출반납연장 START */
+.howtoText {
+	font-family: 'Noto Sans KR', sans-serif;
+}

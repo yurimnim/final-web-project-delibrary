@@ -29,6 +29,8 @@ MVC패턴을 활용한 온라인 도서관 대여 서비스 제공하는 웹사�
          home_heading.style.background = "url('../img/" + images[getImage] + "')";
   ```
   
+  
+  
   #### B. 회원가입
   ![insertCustomer](delibraryGIF/02.join.gif)
   

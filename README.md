@@ -13,6 +13,8 @@ MVC패턴을 활용한 온라인 도서관 대여 서비스 제공하는 웹사�
 
 ### 4. 주요구현기능
   #### A. 홈화면 검색창 디자인
+  ![hero_searchbar][/Users/mac/Desktop/delibraryGIF/01.home.gif]
+
    
   
 

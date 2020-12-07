@@ -12,7 +12,9 @@ MVC패턴을 활용한 온라인 도서관 대여 서비스 제공하는 웹사�
   - 백: Java, OracleDB, SQLDeveloper, SpringMVC, MyBatis, Ajax
 
 ### 4. 주요구현기능
-  #### + A. 홈화면 검색창 디자인
+```diff
+  #### +A. 홈화면 검색창 디자인
+```  
   ![searchbar](delibraryGIF/01.home.gif)
   
   홈화면을 새로고침 할때마다 랜덤으로 도서관 도서에 관련된 헤드라인 글귀, 

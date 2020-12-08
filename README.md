@@ -21,7 +21,7 @@ MVC패턴을 활용한 온라인 도서관 대여 서비스 제공하는 웹사�
   
 ## 5. 주요구현기능
 
-  ### ☑️ 홈화면 검색창 디자인  
+  ### 🌱 홈화면 검색창 디자인  
   
   ![searchbar](delibraryGIF/01.home.gif)
   
@@ -41,7 +41,7 @@ MVC패턴을 활용한 온라인 도서관 대여 서비스 제공하는 웹사�
   
     
   
-  ### ☑️ 회원가입/탈퇴
+  ### 🌱 회원가입/탈퇴
   ![insertCustomer](delibraryGIF/02.join.gif)
   
   회원가입 및 탈퇴 뷰페이지, 관련기능 전체구현.  
@@ -68,7 +68,7 @@ MVC패턴을 활용한 온라인 도서관 대여 서비스 제공하는 웹사�
    ✔️ [임시비밀번호 발급, 메일전송 🔗 비밀번호찾기](https://github.com/yurimnim/final-web-project-delibrary/blob/main/delibraryGIF/09.pwd.gif)[🔗 이메일](https://github.com/yurimnim/final-web-project-delibrary/blob/main/delibraryGIF/10.pwdmail.gif) 
    
   
- ### ☑️ 인기도서 페이지  
+ ### 🌱 인기도서 페이지  
  ![insertCustomer](delibraryGIF/10.pop.gif)  
   DB에서 가장 빌린 도서가 많은 순으로 12개의 도서의 정보를 인기도서 페이지에 출력.  
    
@@ -82,7 +82,7 @@ MVC패턴을 활용한 온라인 도서관 대여 서비스 제공하는 웹사�
 ```
   
   
- ### ☑️ 그 외 구현한 홈페이지 기능
+ ### 🌱 그 외 구현한 홈페이지 기능
    
    ✔️ [🔗 서비스 이용정보 페이지](https://github.com/yurimnim/final-web-project-delibrary/blob/main/delibraryGIF/11.etc_1.gif)  
    ✔️ [🔗 사이트맵](https://github.com/yurimnim/final-web-project-delibrary/blob/main/delibraryGIF/11.etc_2.gif)

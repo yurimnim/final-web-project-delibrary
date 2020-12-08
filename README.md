@@ -38,7 +38,7 @@ MVC패턴을 활용한 온라인 도서관 대여 서비스 제공하는 웹사�
   
   회원가입 뷰페이지, 기능 구현.  
   
-  ** 💡기능 하이라이트💡 **
+  **💡기능 하이라이트💡**
     
    ✔️ Ajax를 이용한 메일 중복확인 기능[🔗](https://github.com/yurimnim/final-web-project-delibrary/blob/main/delibraryGIF/03.join_01.gif)  
    ✔️ 정규식을 이용한 비밀번호 유효성 검사 [🔗](https://github.com/yurimnim/final-web-project-delibrary/blob/main/delibraryGIF/04.join_02.gif)  

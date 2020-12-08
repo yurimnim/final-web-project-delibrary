@@ -72,11 +72,12 @@ MVC패턴을 활용한 온라인 도서관 대여 서비스 제공하는 웹사�
  ![insertCustomer](delibraryGIF/10.pop.gif)  
   DB에서 가장 빌린 도서가 많은 순으로 12개의 도서의 정보를 인기도서 페이지에 출력.  
    
-  👇인기도서 목록을 뽑아오기 위한 DB Select 문  
+  **👇인기도서 목록을 뽑아오기 위한 DB Select 문**
   ```xml
 	<select id="getPopBook" resultType="bookVO">
 		<![CDATA[select * from(select b_title, b_writer,b_image,count(bor_no) from book, 
-borrow where book.b_no = borrow.b_no group by b_title, b_writer, b_image order by count(bor_no) desc) where rownum<=12 ]]>
+		borrow where book.b_no = borrow.b_no group by b_title, b_writer, b_image order by count(bor_no) desc) 
+		where rownum<=12 ]]>
 	</select>
 ```
 

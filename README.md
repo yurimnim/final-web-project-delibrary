@@ -48,12 +48,12 @@ MVC패턴을 활용한 온라인 도서관 대여 서비스 제공하는 웹사�
   
   **💡기능 하이라이트💡**
     
-   ✔️ Ajax를 이용한 메일 중복확인 기능[🔗](https://github.com/yurimnim/final-web-project-delibrary/blob/main/delibraryGIF/03.join_01.gif)  
-   ✔️ 정규식을 이용한 비밀번호 유효성 검사 [🔗](https://github.com/yurimnim/final-web-project-delibrary/blob/main/delibraryGIF/04.join_02.gif)  
-   ✔️ Sha256 을 이용한 DB 비밀번호 암/복호화 [🔗](https://github.com/yurimnim/final-web-project-delibrary/blob/main/delibraryGIF/12.sha.png)  
-   ✔️ KakaoAPI를 이용한 우편번호 검색기능 [🔗](https://github.com/yurimnim/final-web-project-delibrary/blob/main/delibraryGIF/05.join_04.gif)  
-   ✔️ 세션유지를 통한 회원가입 성공 Welcome 페이지 구현 [🔗](https://github.com/yurimnim/final-web-project-delibrary/blob/main/delibraryGIF/06.join_05.gif)  
-   ✔️ Ajax를 이용한 비밀번호 검증 뒤 회원탈퇴 [🔗](https://github.com/yurimnim/final-web-project-delibrary/blob/main/delibraryGIF/08.out.gif)  
+   ✔️ [Ajax를 이용한 메일 중복확인 기능🔗](https://github.com/yurimnim/final-web-project-delibrary/blob/main/delibraryGIF/03.join_01.gif)  
+   ✔️ [정규식을 이용한 비밀번호 유효성 검사 🔗](https://github.com/yurimnim/final-web-project-delibrary/blob/main/delibraryGIF/04.join_02.gif)  
+   ✔️ [Sha256 을 이용한 DB 비밀번호 암/복호화 🔗](https://github.com/yurimnim/final-web-project-delibrary/blob/main/delibraryGIF/12.sha.png)  
+   ✔️ [KakaoAPI를 이용한 우편번호 검색기능 🔗](https://github.com/yurimnim/final-web-project-delibrary/blob/main/delibraryGIF/05.join_04.gif)  
+   ✔️ [세션유지를 통한 회원가입 성공 Welcome 페이지 구현 🔗](https://github.com/yurimnim/final-web-project-delibrary/blob/main/delibraryGIF/06.join_05.gif)  
+   ✔️ [Ajax를 이용한 비밀번호 검증 뒤 회원탈퇴 🔗](https://github.com/yurimnim/final-web-project-delibrary/blob/main/delibraryGIF/08.out.gif)  
      
    
   ### C. 로그인,아웃/이메일찾기/임시비밀번호 발급  
@@ -64,8 +64,8 @@ MVC패턴을 활용한 온라인 도서관 대여 서비스 제공하는 웹사�
       
    **💡기능 하이라이트💡**
     
-   ✔️ 이름 및 전화번호를 입력하여 가입 이메일 찾기[🔗](https://github.com/yurimnim/final-web-project-delibrary/blob/main/delibraryGIF/09.email.gif)  
-   ✔️ 임시비밀번호 발급, 메일전송 [🔗 비밀번호찾기](https://github.com/yurimnim/final-web-project-delibrary/blob/main/delibraryGIF/09.pwd.gif)[🔗 Email](https://github.com/yurimnim/final-web-project-delibrary/blob/main/delibraryGIF/10.pwdmail.gif) 
+   ✔️ [Ajax를 이용한 비밀번호 검증 뒤 회원탈퇴 🔗](https://github.com/yurimnim/final-web-project-delibrary/blob/main/delibraryGIF/09.email.gif)  
+   ✔️ [임시비밀번호 발급, 메일전송 🔗 비밀번호찾기](https://github.com/yurimnim/final-web-project-delibrary/blob/main/delibraryGIF/09.pwd.gif)[🔗 이메일](https://github.com/yurimnim/final-web-project-delibrary/blob/main/delibraryGIF/10.pwdmail.gif) 
    
   
  ### D. 인기도서 페이지  

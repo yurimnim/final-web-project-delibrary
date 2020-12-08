@@ -67,6 +67,28 @@ MVC패턴을 활용한 온라인 도서관 대여 서비스 제공하는 웹사�
    ✔️ 이름 및 전화번호를 입력하여 가입 이메일 찾기[🔗](https://github.com/yurimnim/final-web-project-delibrary/blob/main/delibraryGIF/09.email.gif)  
    ✔️ 임시비밀번호 발급, 메일전송 [🔗 비밀번호찾기](https://github.com/yurimnim/final-web-project-delibrary/blob/main/delibraryGIF/09.pwd.gif)[🔗 Email](https://github.com/yurimnim/final-web-project-delibrary/blob/main/delibraryGIF/10.pwdmail.gif) 
    
+  
+ ### D. 인기도서 페이지  
+ ![insertCustomer](delibraryGIF/10.pop.gif)  
+  DB에서 가장 빌린 도서가 많은 순으로 12개의 도서의 정보를 인기도서 페이지에 출력.  
+   
+  👇인기도서 목록을 뽑아오기 위한 DB Select 문  
+  ```xml
+	<select id="getPopBook" resultType="bookVO">
+		<![CDATA[select * from(select b_title, b_writer,b_image,count(bor_no) from book, 
+borrow where book.b_no = borrow.b_no group by b_title, b_writer, b_image order by count(bor_no) desc) where rownum<=12 ]]>
+	</select>
+```
+
+
+
+  
+  
+  
+  
+  
+  
+  
    
  
      

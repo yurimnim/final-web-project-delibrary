@@ -56,10 +56,10 @@ MVC패턴을 활용한 온라인 도서관 대여 서비스 제공하는 웹사�
    ✔️ Ajax를 이용한 비밀번호 검증 뒤 회원탈퇴 [🔗](https://github.com/yurimnim/final-web-project-delibrary/blob/main/delibraryGIF/08.out.gif)  
      
    
-  ### C. 로그인/이메일찾기/임시비밀번호 발급  
+  ### C. 로그인,아웃/이메일찾기/임시비밀번호 발급  
   
   ![login](delibraryGIF/07.login.gif)  
-  로그인 및 부가 기능 뷰페이지/기능 일체구현.  
+  로그인, 로그아웃 세션유지 및 부가 기능 뷰페이지와 기능 일체구현.  
     
       
    **💡기능 하이라이트💡**
@@ -80,6 +80,15 @@ MVC패턴을 활용한 온라인 도서관 대여 서비스 제공하는 웹사�
 		where rownum<=12 ]]>
 	</select>
 ```
+  
+  
+ ### E. 그 외 구현한 홈페이지 기능
+   
+   ✔️ [🔗 서비스 이용정보 페이지](https://github.com/yurimnim/final-web-project-delibrary/blob/main/delibraryGIF/11.etc_1.gif)  
+   ✔️ [🔗 사이트맵](https://github.com/yurimnim/final-web-project-delibrary/blob/main/delibraryGIF/11.etc_2.gif)
+ 
+ 
+
 
 
 

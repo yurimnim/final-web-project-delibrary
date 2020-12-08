@@ -39,7 +39,7 @@ MVC패턴을 활용한 온라인 도서관 대여 서비스 제공하는 웹사�
          home_heading.style.background = "url('../img/" + images[getImage] + "')";
   ```
   
-  
+    
   
   ### B. 회원가입/탈퇴
   ![insertCustomer](delibraryGIF/02.join.gif)
@@ -55,12 +55,13 @@ MVC패턴을 활용한 온라인 도서관 대여 서비스 제공하는 웹사�
    ✔️ 세션유지를 통한 회원가입 성공 Welcome 페이지 구현 [🔗](https://github.com/yurimnim/final-web-project-delibrary/blob/main/delibraryGIF/06.join_05.gif)  
    ✔️ Ajax를 이용한 비밀번호 검증 뒤 회원탈퇴 [🔗](https://github.com/yurimnim/final-web-project-delibrary/blob/main/delibraryGIF/08.out.gif)  
      
- 
+   
   ### C. 로그인/이메일찾기/임시비밀번호 발급  
   
-  ![login](delibraryGIF/07.login.gif)
+  ![login](delibraryGIF/07.login.gif)  
   로그인 및 부가 기능 뷰페이지/기능 일체구현.  
     
+      
    **💡기능 하이라이트💡**
     
    ✔️ 이름 및 전화번호를 입력하여 가입 이메일 찾기[🔗](https://github.com/yurimnim/final-web-project-delibrary/blob/main/delibraryGIF/09.email.gif)  

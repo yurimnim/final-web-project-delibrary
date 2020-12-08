@@ -30,7 +30,7 @@ MVC패턴을 활용한 온라인 도서관 대여 서비스 제공하는 웹사�
   나오는 디자인을 구현.  
   
   ```javascript 
-   //홈헤딩 이미지
+   //홈헤딩 이미지 랜덤출력 구현예시
          const home_heading = document.getElementById('home-heading');
       
          const images = ['library1.png','library2.png','library3.png','library4.png','library5.png','library6.png','library7.png','library8.jpg'];

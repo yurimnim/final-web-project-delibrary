@@ -5,12 +5,12 @@
 2020. 10.01 ~ 2020.11.30
 
 ## 2. 참여인원 
-[📘박재성](https://github.com/wotjd0860)
-[📗오김인](https://github.com/inhalin)
-[📒오나영](https://github.com/ohna93)
-📙이유림👋
-[📓양현왕](https://github.com/YangHyeonWang)
-[📔홍용택](https://github.com/yongtaek12)
+[📘박재성](https://github.com/wotjd0860)  
+[📗오김인](https://github.com/inhalin)  
+[📒오나영](https://github.com/ohna93)  
+📙이유림 👋me  
+[📓양현왕](https://github.com/YangHyeonWang)  
+[📔홍용택](https://github.com/yongtaek12)  
 
 ## 3.개발개요
 MVC패턴을 활용한 온라인 도서관 대여 서비스 제공하는 웹사이트 제작 

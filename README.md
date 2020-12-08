@@ -4,14 +4,22 @@
 ## 1.구현기간
 2020. 10.01 ~ 2020.11.30
 
-## 2.개발개요
+## 2. 참여인원 
+[📘박재성](https://github.com/wotjd0860)
+[📗오김인](https://github.com/inhalin)
+[📒오나영](https://github.com/ohna93)
+📙이유림👋
+[📓양현왕](https://github.com/YangHyeonWang)
+[📔홍용택](https://github.com/yongtaek12)
+
+## 3.개발개요
 MVC패턴을 활용한 온라인 도서관 대여 서비스 제공하는 웹사이트 제작 
 
-## 3.기술스택
+## 4.기술스택
   - 프론트: HTML/CSS, Javascript, Jquery, Bootstrap, JSP
   - 백: Java, OracleDB, SQLDeveloper, SpringMVC, MyBatis, Ajax
 
-## 4. 주요구현기능
+## 5. 주요구현기능
 
   ### A. 홈화면 검색창 디자인  
   
@@ -33,18 +41,34 @@ MVC패턴을 활용한 온라인 도서관 대여 서비스 제공하는 웹사�
   
   
   
-  ### B. 회원가입
+  ### B. 회원가입/탈퇴
   ![insertCustomer](delibraryGIF/02.join.gif)
   
-  회원가입 뷰페이지, 기능 구현.  
+  회원가입 및 탈퇴 뷰페이지, 관련기능 전체구현.  
   
   **💡기능 하이라이트💡**
     
    ✔️ Ajax를 이용한 메일 중복확인 기능[🔗](https://github.com/yurimnim/final-web-project-delibrary/blob/main/delibraryGIF/03.join_01.gif)  
    ✔️ 정규식을 이용한 비밀번호 유효성 검사 [🔗](https://github.com/yurimnim/final-web-project-delibrary/blob/main/delibraryGIF/04.join_02.gif)  
+   ✔️ Sha256 을 이용한 DB 비밀번호 암/복호화 [🔗](https://github.com/yurimnim/final-web-project-delibrary/blob/main/delibraryGIF/12.sha.png)  
    ✔️ KakaoAPI를 이용한 우편번호 검색기능 [🔗](https://github.com/yurimnim/final-web-project-delibrary/blob/main/delibraryGIF/05.join_04.gif)  
    ✔️ 세션유지를 통한 회원가입 성공 Welcome 페이지 구현 [🔗](https://github.com/yurimnim/final-web-project-delibrary/blob/main/delibraryGIF/06.join_05.gif)  
-
+   ✔️ Ajax를 이용한 비밀번호 검증 뒤 회원탈퇴 [🔗](https://github.com/yurimnim/final-web-project-delibrary/blob/main/delibraryGIF/08.out.gif)  
+     
+ 
+  ### C. 로그인/이메일찾기/임시비밀번호 발급  
+  
+  ![login](delibraryGIF/07.login.gif)
+  로그인 및 부가 기능 뷰페이지/기능 일체구현.  
+    
+   **💡기능 하이라이트💡**
+    
+   ✔️ 이름 및 전화번호를 입력하여 가입 이메일 찾기[🔗](https://github.com/yurimnim/final-web-project-delibrary/blob/main/delibraryGIF/09.email.gif)  
+   ✔️ 임시비밀번호 발급, 메일전송 [🔗 비밀번호찾기](https://github.com/yurimnim/final-web-project-delibrary/blob/main/delibraryGIF/09.pwd.gif)[🔗 Email](https://github.com/yurimnim/final-web-project-delibrary/blob/main/delibraryGIF/10.pwdmail.gif) 
+   
+   
+ 
+     
    
   
 

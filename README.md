@@ -38,12 +38,12 @@ MVC패턴을 활용한 온라인 도서관 대여 서비스 제공하는 웹사�
   
   회원가입 뷰페이지, 기능 구현.  
   
-  __💡기능 하이라이트💡__  
+  ** 💡기능 하이라이트💡 **
     
-   ✔️ Ajax를 이용한 메일 중복확인 기능  
-   ✔️ 정규식을 이용한 비밀번호 유효성 검사  
-   ✔️ KakaoAPI를 이용한 우편번호 검색기능  
-   ✔️ 세션유지를 통한 회원가입 성공 Welcome 페이지 구현  
+   ✔️ Ajax를 이용한 메일 중복확인 기능[🔗](https://github.com/yurimnim/final-web-project-delibrary/blob/main/delibraryGIF/03.join_01.gif)
+   ✔️ 정규식을 이용한 비밀번호 유효성 검사 [🔗](https://github.com/yurimnim/final-web-project-delibrary/blob/main/delibraryGIF/04.join_02.gif)  
+   ✔️ KakaoAPI를 이용한 우편번호 검색기능 [🔗](https://github.com/yurimnim/final-web-project-delibrary/blob/main/delibraryGIF/05.join_04.gif)  
+   ✔️ 세션유지를 통한 회원가입 성공 Welcome 페이지 구현 [🔗](https://github.com/yurimnim/final-web-project-delibrary/blob/main/delibraryGIF/06.join_05.gif)  
 
    
   

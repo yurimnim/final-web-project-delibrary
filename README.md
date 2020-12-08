@@ -19,7 +19,7 @@ MVC패턴을 활용한 온라인 도서관 대여 서비스 제공하는 웹사�
   
   ✔️ 홈화면을 새로고침 할때마다 랜덤으로 도서관 도서에 관련된 헤드라인 글귀, 
   도서관 이미지, 이미지에 맞는 장소가
-  나오는 디자인을 구현.
+  나오는 디자인을 구현.  
   
   ```javascript 
    //홈헤딩 이미지
@@ -36,9 +36,28 @@ MVC패턴을 활용한 온라인 도서관 대여 서비스 제공하는 웹사�
   ### B. 회원가입
   ![insertCustomer](delibraryGIF/02.join.gif)
   
-  회원가입 뷰페이지, 기능 구현. 
+  회원가입 뷰페이지, 기능 구현.  
   
-  __기능 하이라이트__
+  __💡기능 하이라이트💡__  
+  
+      👉 Ajax를 이용한 메일 중복확인 기능
+   ![insertCustomer](delibraryGIF/03.join_01.gif)  
+   
+   
+    👉 정규식을 이용한 비밀번호 유효성 검사
+   ![insertCustomer](delibraryGIF/04.join_02.gif)  
+   
+   
+    👉 KakaoAPI를 이용한 우편번호 검색기능
+   ![insertCustomer](delibraryGIF/05.join_04.gif)  
+   
+    👉 세션유지를 통한 회원가입 성공 Welcome 페이지 구현
+   ![insertCustomer](delibraryGIF/06.join_05.gif)  
+ 
+   
+   
+   
+   
   
   
   

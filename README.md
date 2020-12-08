@@ -40,7 +40,7 @@ MVC패턴을 활용한 온라인 도서관 대여 서비스 제공하는 웹사�
   ```
   
     
-  
+    
   ### 🌱 회원가입/탈퇴
   ![insertCustomer](delibraryGIF/02.join.gif)
   
@@ -68,6 +68,7 @@ MVC패턴을 활용한 온라인 도서관 대여 서비스 제공하는 웹사�
    ✔️ [임시비밀번호 발급, 메일전송 🔗 비밀번호찾기](https://github.com/yurimnim/final-web-project-delibrary/blob/main/delibraryGIF/09.pwd.gif)[🔗 이메일](https://github.com/yurimnim/final-web-project-delibrary/blob/main/delibraryGIF/10.pwdmail.gif) 
    
   
+    
  ### 🌱 인기도서 페이지  
  ![insertCustomer](delibraryGIF/10.pop.gif)  
   DB에서 가장 빌린 도서가 많은 순으로 12개의 도서의 정보를 인기도서 페이지에 출력.  
@@ -80,7 +81,8 @@ MVC패턴을 활용한 온라인 도서관 대여 서비스 제공하는 웹사�
 		where rownum<=12 ]]>
 	</select>
 ```
-  
+    
+    
   
  ### 🌱 그 외 구현한 홈페이지 기능
    

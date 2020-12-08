@@ -13,11 +13,11 @@
 [📔홍용택](https://github.com/yongtaek12)  
   
 ## 3.개발개요
-MVC패턴을 활용한 온라인 도서관 대여 서비스 제공하는 웹사이트 제작 
+SpringMVC패턴을 활용한 온라인 도서관 대여 서비스 제공하는 웹사이트 제작 
   
 ## 4.기술스택
-  - 프론트: HTML/CSS, Javascript, Jquery, Bootstrap, JSP
-  - 백: Java, OracleDB, SQLDeveloper, SpringMVC, MyBatis, Ajax
+  - 프론트: HTML/CSS, Javascript, Jquery, Bootstrap, JSP / IDE: VScode
+  - 백: Java, OracleDB, SpringBoot, MyBatis, Ajax / Tools and IDE: Spring Tool Suite4, Eclipse, SQLDeveloper
   
 ## 5. 주요구현기능
 
@@ -89,19 +89,6 @@ MVC패턴을 활용한 온라인 도서관 대여 서비스 제공하는 웹사�
    ✔️ [🔗 서비스 이용정보 페이지](https://github.com/yurimnim/final-web-project-delibrary/blob/main/delibraryGIF/11.etc_1.gif)  
    ✔️ [🔗 사이트맵](https://github.com/yurimnim/final-web-project-delibrary/blob/main/delibraryGIF/11.etc_2.gif)
  
- 
-
-
-
-
-  
-  
-  
-  
-  
-  
-  
-   
  
      
    
